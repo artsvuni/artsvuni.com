@@ -143,6 +143,8 @@
     display: flex;
     position: relative; }
     .bps__browser-preview__desktop img {
+      -ms-flex-item-align: start;
+      align-self: flex-start;
       width: 100%; }
     .bps__browser-preview__desktop video {
       position: absolute;
@@ -168,6 +170,8 @@
     position: relative;
     display: none; }
     .bps__browser-preview__mobile img {
+      -ms-flex-item-align: start;
+      align-self: flex-start;
       width: 100%; }
     .bps__browser-preview__mobile video {
       position: absolute;
@@ -177,7 +181,7 @@
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: 4%; }
+      bottom: 4.5%; }
     @media screen and (max-width: 640px) {
       .bps__browser-preview__mobile {
         display: -webkit-box;

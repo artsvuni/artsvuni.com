@@ -12,7 +12,6 @@ html(lang='en')
     meta(name='author', content='Alexander Artsvuni')
 
     meta(property='og:title' content='Alexander Artsvuni')
-    //- Add path to the image here and website address ↴
     meta(property='og:image' content='https://artsvuni.com/images/web-preview.jpg')
     meta(property='og:url' content='https://artsvuni.com' )
     meta(property='og:description' content='A personal webpage. Latest projects, links and experience')
@@ -26,13 +25,13 @@ html(lang='en')
     .wrap
       .grs
         .grs__top
-          a.grs__link.instagram-link(href="https://www.instagram.com/alexander.artsvuni/") Instagram
-          a.grs__link.medium-link(href="https://medium.com/@artsvuni") Medium
+          a.grs__link.instagram-link(href="https://www.instagram.com/alexander.artsvuni" target="_blank") Instagram
+          a.grs__link.medium-link(href="https://medium.com/@artsvuni" target="_blank") Medium
         .grs__middle
           h1.grs__title Alexander<span> </span><br/>Artsvuni
         .grs__bottom
-          a.grs__link.linkedin-link(href="https://www.linkedin.com/in/artsvuni/") Linkedin
-          a.grs__link(href="mailto:alexander@artsvuni.com") Get in touch
+          a.grs__link.linkedin-link(href="https://www.linkedin.com/in/artsvuni" target="_blank") Linkedin
+          a.grs__link(href="mailto:alexander@artsvuni.com" target="_blank") Get in touch
 
       .width-wrapper_black
         .bps.bps_padding-bottom-0
@@ -40,11 +39,11 @@ html(lang='en')
             h1.title Farfetch.com <br/> Navigation
             p.bps__paragraph.accent-text Joining Farfetch in 2016, my first project was redesign of the navigation across desktop and mobile web site. 
           .bps__browser-preview__desktop
-            video(controls=false autoplay muted loop preload="metadata")
+            video(controls=false playsinline autoplay muted loop preload="metadata")
               source(src="./video/browser-home-desktop.mp4" type="video/mp4")
             img(src="./images/navigation-slide-browser.png")
           .bps__browser-preview__mobile
-            video(controls=false autoplay muted loop preload="metadata")
+            video(controls=false playsinline autoplay muted loop preload="metadata")
               source(src="./video/browser-home-mobile.mp4" type="video/mp4")
             img(src="./images/navigation-slide-browser-mobile.png")
 
@@ -52,7 +51,7 @@ html(lang='en')
         .pps
           .phone
             .phone-preview
-              video.phone-preview__video( controls=false autoplay muted loop preload="metadata" )
+              video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
                 source(src="./video/ios-app-home.mp4" type="video/mp4")
               img.phone-preview__frame(srcset="./images/iphone-frame.png 2x")
           .content-wrap
@@ -81,7 +80,7 @@ html(lang='en')
       .pps
         .phone
           .phone-preview
-            video.phone-preview__video( controls=false autoplay muted loop preload="metadata" )
+            video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
               source(src="./video/ios-app-inputs.mp4" type="video/mp4")
             img.phone-preview__frame(srcset="./images/iphone-frame.png 2x")
         .content-wrap
@@ -93,43 +92,43 @@ html(lang='en')
         .pps.pps_reverse
           .phone
             .phone-preview
-              video.phone-preview__video( controls=false autoplay muted loop preload="metadata" )
+              video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
                 source(src="./video/ios-app-localisation.mp4" type="video/mp4")
               img.phone-preview__frame(srcset="./images/iphone-frame.png 2x")
           .content-wrap
             .content-block
               h1.title International Localisation
-              p.accent-text As Farfetch expanded to new markets, I was accountable for optimising our native interfaces to work equally good in all languages. 
+              p.accent-text As Farfetch expanded to new markets, I was accountable for optimising our native interfaces to work equally good in all languages.
       
       .pps
         .phone
           .phone-preview
-            video.phone-preview__video( controls=false autoplay muted loop preload="metadata" )
+            video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
               source(src="./video/ios-china-app.mp4" type="video/mp4")
             img.phone-preview__frame(srcset="./images/iphone-frame.png 2x")
         .content-wrap
           .content-block
             h1.title Farfetch <br/> China App
-            p.accent-text As a principal designer, I lead our Shanghai-based design team and was responsible for the launch of the localised version of the app in 2018. 
+            p.accent-text As a principal designer, I lead our Shanghai-based design team and was responsible for the launch of the localised version of the app in 2018.
       
       .width-wrapper_gray
         .bps
           .content-block.desk-margin-top-l
             h1.title Accessible Prototyping Kit
             p.bps__paragraph.accent-text I defined design standards for the native app and developed tools that help designers to ensure our interfaces are AA accessible ‘out of the box’.
-          video.bps__video_desktop(controls=false autoplay muted loop preload="metadata")
+          video.bps__video_desktop(controls=false playsinline autoplay muted loop preload="metadata")
             source(src="./video/dynamictype-desktop.mp4" type="video/mp4")
-          video.bps__video_mobile(controls=false autoplay muted loop preload="metadata")
+          video.bps__video_mobile(controls=false playsinline autoplay muted loop preload="metadata")
             source(src="./video/dynamictype-mobile.mp4" type="video/mp4")
       
       .width-wrapper_black
         .bps.bps_black
           .content-block
             h1.title Native UI <br/> Framework
-            p.bps__paragraph.accent-text Teaming up with Principal Engineer Fabio Almeida, we created a toolkit for designing and building production level interfaces faster than ever before. 
-          video.bps__video_desktop(controls=false autoplay muted loop preload="metadata")
+            p.bps__paragraph.accent-text Teaming up with Principal Engineer Fabio Almeida, we created a toolkit for designing and building production level interfaces faster than ever before.
+          video.bps__video_desktop(controls=false playsinline autoplay muted loop preload="metadata")
             source(src="./video/ui-framework.mp4" type="video/mp4")
-          video.bps__video_mobile(controls=false autoplay muted loop preload="metadata")
+          video.bps__video_mobile(controls=false playsinline autoplay muted loop preload="metadata")
             source(src="./video/ui-framework-mobile.mp4" type="video/mp4")
       
       .sps
