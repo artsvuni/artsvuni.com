@@ -1,0 +1,18 @@
+// Spotify Section
+.sps {
+  @include base-section;
+  padding-top: $spacer-m + $spacer-s;
+  &__text {
+    @media screen and (min-width: $scr-desktop) {
+      margin-top: $spacer-xxl;
+    }
+    @media screen and (max-width: $scr-desktop) {
+      margin-top: 12vw;
+    }
+  }
+  &__player {
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+  }
+}

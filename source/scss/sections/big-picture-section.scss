@@ -1,0 +1,84 @@
+// Big Picture Section
+.bps {
+  @include base-section-large-vertical-paddings;
+
+  &_padding-bottom-0 {
+    @media screen and (max-width: $scr-desktop),
+      screen and (min-width: $scr-desktop) {
+      padding-bottom: 0;
+    }
+    @media screen and (max-width: $scr-mobile) {
+      padding-bottom: $spacer-m;
+    }
+  }
+
+  &__paragraph {
+    @include fluid-size(
+      margin-bottom,
+      $scr-mobile,
+      $scr-desktop,
+      $spacer-m,
+      $spacer-xl
+    );
+  }
+
+  &__browser-preview {
+    &__desktop {
+      user-select: none;
+      width: 100%;
+      display: flex;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      video {
+        position: absolute;
+        display: inline-block;
+        width: 80.2%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+      @media screen and (max-width: $scr-mobile) {
+        display: none;
+      }
+    }
+    &__mobile {
+      user-select: none;
+      width: 100%;
+      display: flex;
+      position: relative;
+      display: none;
+      img {
+        width: 100%;
+      }
+      video {
+        position: absolute;
+        display: inline-block;
+        width: 92%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4%;
+      }
+      @media screen and (max-width: $scr-mobile) {
+        display: flex;
+      }
+    }
+  }
+
+  &__video {
+    &_desktop {
+      width: 100%;
+      @media screen and (max-width: $scr-mobile) {
+        display: none;
+      }
+    }
+    &_mobile {
+      width: 100%;
+      display: none;
+      @media screen and (max-width: $scr-mobile) {
+        display: inline-block;
+      }
+    }
+  }
+}

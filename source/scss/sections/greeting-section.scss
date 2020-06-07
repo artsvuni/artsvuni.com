@@ -1,0 +1,40 @@
+// Greeting Section
+.grs {
+  @include base-section;
+  height: 73vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__middle {
+    text-align: center;
+  }
+
+  &__link {
+    @include fluid-type($scr-mobile, $scr-desktop, 14px, 29px);
+  }
+
+  &__title {
+    @include fluid-type($scr-mobile, $scr-desktop, 34px, 29px);
+    line-height: 1.2;
+
+    br {
+      display: none;
+    }
+
+    @media screen and (max-width: $scr-mobile) {
+      line-height: 1;
+      br {
+        display: inline-block;
+      }
+    }
+  }
+}

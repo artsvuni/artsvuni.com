@@ -1,0 +1,163 @@
+@import './global-variables';
+@import './mixins';
+@import './sections/sections';
+
+////////////////////////////////////////////////////
+////////////////// General Styles //////////////////
+////////////////////////////////////////////////////
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-family: Grot-Bold, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  overflow-x: hidden;
+  color: $clr-dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+a {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: $clr-dark;
+  z-index: 1;
+  display: inline-block;
+  transition: all 0.1s ease-out;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: $clr-dark;
+    display: inline-block;
+    z-index: -1;
+    transition: all 0.1s ease-out;
+  }
+  &:hover {
+    color: white;
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+////////////////////////////////////////////////////
+///////////////// General Classes //////////////////
+////////////////////////////////////////////////////
+
+.instagram-link {
+  &::after {
+    background: radial-gradient(
+      circle at 33% 100%,
+      #fed373 4%,
+      #f15245 30%,
+      #d92e7f 62%,
+      #9b36b7 85%,
+      #515ecf
+    );
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+.linkedin-link {
+  &::after {
+    background: #2867b2;
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+.medium-link {
+  &::after {
+    background: #03a87c;
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+.title {
+  @include fluid-type($scr-mobile, $scr-desktop, 32px, 60px);
+  line-height: 1;
+  margin-bottom: $spacer-s;
+}
+
+.accent-text {
+  @include fluid-type($scr-mobile, $scr-desktop, 19px, 29px);
+  @include fluid-size(line-height, $scr-mobile, $scr-desktop, 24px, 33px);
+}
+
+.content-block {
+  max-width: 520px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 $spacer-m;
+  width: 100%;
+  @media screen and (max-width: $scr-tablet) {
+    padding: 0 $spacer-s;
+  }
+  @media screen and (max-width: $scr-mobile) {
+    padding: 0;
+  }
+}
+
+.width-wrapper {
+  &_black {
+    @include width-wrapper;
+    background: $clr-black;
+    color: $clr-white;
+  }
+  &_dark {
+    @include width-wrapper;
+    background: $clr-dark;
+    color: $clr-white;
+  }
+  &_gray {
+    @include width-wrapper;
+    background: $clr-lightgray;
+    color: $clr-dark;
+  }
+  &_overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+///////////////////////////////////////////////////////
+///////////////// Functional Classes //////////////////
+///////////////////////////////////////////////////////
+
+.desk-margin-top {
+  &-m {
+    margin-top: $spacer-m;
+    @media screen and (max-width: $scr-mobile) {
+      margin-top: 0;
+    }
+  }
+  &-l {
+    margin-top: $spacer-l;
+    @media screen and (max-width: $scr-mobile) {
+      margin-top: 0;
+    }
+  }
+}

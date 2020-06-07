@@ -1,0 +1,127 @@
+// Base section
+@mixin base-section {
+  width: 100%;
+  max-width: $scr-desktop;
+  margin: 0 auto;
+  @include fluid-size(
+    padding-top,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-l
+  );
+  @include fluid-size(
+    padding-bottom,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-l
+  );
+  @include fluid-size(
+    padding-left,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-xl
+  );
+  @include fluid-size(
+    padding-right,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-xl
+  );
+}
+
+// Section with larger vertical paddings
+@mixin base-section-large-vertical-paddings {
+  width: 100%;
+  max-width: $scr-desktop;
+  margin: 0 auto;
+  @include fluid-size(
+    padding-top,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-l,
+    $spacer-xl * 2
+  );
+  @include fluid-size(
+    padding-bottom,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-xxxl
+  );
+  @include fluid-size(
+    padding-left,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-xl
+  );
+  @include fluid-size(
+    padding-right,
+    $scr-mobile,
+    $scr-desktop,
+    $spacer-m,
+    $spacer-xl
+  );
+}
+
+// Wrapper for backgrounds
+@mixin width-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+// Fluid Type
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+// Fluid Margins
+@mixin fluid-size($property, $min-vw, $max-vw, $min-spacer, $max-spacer) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-spacer);
+  $u4: unit($max-spacer);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      #{$property}: $min-spacer;
+      @media screen and (min-width: $min-vw) {
+        #{$property}: calc(
+          #{$min-spacer} + #{strip-unit($max-spacer - $min-spacer)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        #{$property}: $max-spacer;
+      }
+    }
+  }
+}

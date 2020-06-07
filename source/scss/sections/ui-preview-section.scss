@@ -1,0 +1,52 @@
+// UI Preview Section
+.uips {
+  @include base-section-large-vertical-paddings;
+  padding-bottom: 0 !important;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $scr-desktop) {
+    padding-top: $spacer-xl * 2;
+  }
+  @media screen and (max-width: $scr-desktop) {
+    padding-top: 12vw;
+  }
+
+  &__preview {
+    &_desktop {
+      @media screen and (min-width: 2000px) {
+        width: 150%;
+      }
+      @media screen and (max-width: 2000px) {
+        width: calc(60% + 43vw);
+      }
+
+      @media screen and (min-width: $scr-desktop) {
+        margin-top: -$spacer-l * 3;
+      }
+      @media screen and (max-width: $scr-desktop) {
+        margin-top: calc(#{$spacer-l} - 20vw);
+      }
+      @media screen and (max-width: $scr-mobile) {
+        display: none;
+      }
+    }
+    &_mobile {
+      width: calc(100% + #{$spacer-m * 2});
+      margin-left: -$spacer-m;
+      margin-right: -$spacer-m;
+      margin-top: $spacer-m;
+      display: none;
+      @media screen and (max-width: $scr-mobile) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .content-block {
+    width: 50%;
+    @media screen and (max-width: $scr-mobile) {
+      width: 100%;
+    }
+  }
+}

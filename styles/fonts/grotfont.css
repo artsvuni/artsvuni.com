@@ -1,0 +1,7 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: 'Grot-Bold';
+  src: url('./fonts/GrotBold.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
