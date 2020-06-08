@@ -24,14 +24,19 @@
 
   &__title {
     @include fluid-type($scr-mobile, $scr-desktop, 34px, 29px);
-    line-height: 1.2;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+
 
     br {
       display: none;
     }
 
     @media screen and (max-width: $scr-mobile) {
-      line-height: 1;
+      width: 256px;
       br {
         display: inline-block;
       }

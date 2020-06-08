@@ -65,7 +65,11 @@
       .grs__link {
         font-size: 29px; } }
   .grs__title {
-    line-height: 1.2; }
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center; }
     .grs__title {
       font-size: 34px; }
       @media screen and (min-width: 640px) {
@@ -78,7 +82,7 @@
       display: none; }
     @media screen and (max-width: 640px) {
       .grs__title {
-        line-height: 1; }
+        width: 256px; }
         .grs__title br {
           display: inline-block; } }
 
@@ -490,7 +494,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-family: Grot-Bold, Arial, Helvetica, sans-serif;
-  font-weight: 700;
   overflow-x: hidden;
   color: #222222; }
 
@@ -498,7 +501,8 @@ h1,
 h2,
 h3,
 h4 {
-  margin-top: 0; }
+  margin-top: 0;
+  font-weight: 400; }
 
 a {
   position: relative;
@@ -552,10 +556,10 @@ a {
   line-height: 1;
   margin-bottom: 20px; }
   .title {
-    font-size: 32px; }
+    font-size: 34px; }
     @media screen and (min-width: 640px) {
       .title {
-        font-size: calc( 32px + 28 * ((100vw - 640px) / 560)); } }
+        font-size: calc( 34px + 26 * ((100vw - 640px) / 560)); } }
     @media screen and (min-width: 1200px) {
       .title {
         font-size: 60px; } }

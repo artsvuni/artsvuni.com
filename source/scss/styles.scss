@@ -15,7 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-family: Grot-Bold, Arial, Helvetica, sans-serif;
-  font-weight: 700;
   overflow-x: hidden;
   color: $clr-dark;
 }
@@ -25,6 +24,7 @@ h2,
 h3,
 h4 {
   margin-top: 0;
+  font-weight: 400;
 }
 
 a {
@@ -94,7 +94,7 @@ a {
 }
 
 .title {
-  @include fluid-type($scr-mobile, $scr-desktop, 32px, 60px);
+  @include fluid-type($scr-mobile, $scr-desktop, 34px, 60px);
   line-height: 1;
   margin-bottom: $spacer-s;
 }
