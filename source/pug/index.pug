@@ -1,6 +1,12 @@
 doctype html
 html(lang='en')
   head
+    script(async src='https://www.googletagmanager.com/gtag/js?id=UA-109253058-1')
+    script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-109253058-1');
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='icon', type='image/png', href='favico/ico-96x96.png', sizes='96x96')
@@ -20,7 +26,7 @@ html(lang='en')
     link(href='/styles/fonts/fontface.css', rel='stylesheet')
     link(rel='stylesheet', href='styles/styles.css')
     script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js")
-    
+
   body
     .wrap
       .grs
