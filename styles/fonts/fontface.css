@@ -3,3 +3,8 @@
   src: url('./GrotBold.woff2') format('woff2'); /* Modern Browsers */
   font-weight: 400;
 }
+@font-face {
+  font-family: 'Farfetch Basis';
+  src: url('./BasisBold.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: 400;
+}

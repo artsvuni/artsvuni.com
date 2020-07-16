@@ -1,0 +1,146 @@
+doctype html
+html(lang='en')
+  head
+    script(async src='https://www.googletagmanager.com/gtag/js?id=UA-109253058-1')
+    script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-109253058-1');
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/png', href='favico/ico-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='favico/ico-64x64.png', sizes='64x64')
+    link(rel='icon', type='image/png', href='favico/ico-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='favico/ico-16x16.png', sizes='16x16')
+    title Алексадр Арцвуни
+    meta(name='description', content='A personal webpage. Latest projects, links and experience')
+    meta(name='author', content='Alexander Artsvuni')
+
+    meta(property='og:title' content='Alexander Artsvuni')
+    meta(property='og:image' content='https://artsvuni.com/images/web-preview.jpg')
+    meta(property='og:url' content='https://artsvuni.com' )
+    meta(property='og:description' content='A personal webpage. Latest projects, links and experience')
+
+    link(rel='stylesheet', href='../styles/normalize.css')
+    link(href='../styles/fonts/fontface.css', rel='stylesheet')
+    link(rel='stylesheet', href='../styles/styles.css')
+    script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js")
+
+  body
+    .wrap
+      .grs
+        .grs__top
+          a.grs__link.instagram-link(href="https://www.instagram.com/alexander.artsvuni" target="_blank") Instagram
+          a.grs__link.medium-link(href="https://medium.com/@artsvuni" target="_blank") Medium
+        .grs__middle
+          h1.grs__title Александр Арцвуни
+        .grs__bottom
+          a.grs__link.linkedin-link(href="https://www.linkedin.com/in/artsvuni" target="_blank") Linkedin
+          a.grs__link(href="mailto:alexander@artsvuni.com" target="_blank") Get in touch
+
+      .width-wrapper_black
+        .bps.bps_padding-bottom-0
+          .content-block
+            h1.title Farfetch.com <br/>Navigation
+            p.bps__paragraph.accent-text On joining Farfetch in 2016, my first project was to redesign the navigation across both desktop and mobile.
+          .bps__browser-preview__desktop
+            video(controls=false playsinline autoplay muted loop preload="metadata")
+              source(src="../video/browser-home-desktop.mp4" type="video/mp4")
+            img(src="../images/navigation-slide-browser.png")
+          .bps__browser-preview__mobile
+            video(controls=false playsinline autoplay muted loop preload="metadata")
+              source(src="../video/browser-home-mobile.mp4" type="video/mp4")
+            img(src="../images/navigation-slide-browser-mobile.png")
+
+      .width-wrapper_gray
+        .pps
+          .phone
+            .phone-preview
+              video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
+                source(src="../video/ios-app-home.mp4" type="video/mp4")
+              img.phone-preview__frame(srcset="../images/iphone-frame.png 2x")
+          .content-wrap
+            .content-block
+              h1.title Home view for iOS/Android
+              p.accent-text Working to improve engagement, I started focusing on native application design. <br/>I eventually created a specialist mobile app design team at Farfetch.
+      
+      .pps.pps_reverse
+        .phone
+          .phone-preview
+            img.phone-preview__image(srcset="../images/search-and-navigation.png 2x")
+            img.phone-preview__frame(srcset="../images/iphone-frame.png 2x")
+        .content-wrap
+          .content-block
+            h1.title Search and navigation
+            p.accent-text Over 2 years my team and I led the effort focused on iterative improvements of Farfetch mobile apps.
+
+      .width-wrapper_gray.width-wrapper_overflow-hidden
+        .uips
+          .content-block
+              h1.title Component driven design
+              p.accent-text To improve alignment and consistency, I built a technical design practice based on close collaboration between the design and engineering teams.
+          img.uips__preview_desktop(src="../images/ui-kit-preview-desktop.png")
+          img.uips__preview_mobile(src="../images/ui-kit-preview-mobile.png")
+
+      .pps
+        .phone
+          .phone-preview
+            video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
+              source(src="../video/ios-app-inputs.mp4" type="video/mp4")
+            img.phone-preview__frame(srcset="../images/iphone-frame.png 2x")
+        .content-wrap
+          .content-block
+            h1.title Accessible inputs
+            p.accent-text Looking closer at micro-interactions to improve usability, I led the initiative to make our native apps more inclusive and accessible.
+      
+      .width-wrapper_gray
+        .pps.pps_reverse
+          .phone
+            .phone-preview
+              video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
+                source(src="../video/ios-app-localisation.mp4" type="video/mp4")
+              img.phone-preview__frame(srcset="../images/iphone-frame.png 2x")
+          .content-wrap
+            .content-block
+              h1.title International localisation
+              p.accent-text As Farfetch expanded to new markets, I was responsible for optimising our native interfaces to work equally well in all languages.
+      
+      .pps
+        .phone
+          .phone-preview
+            video.phone-preview__video( controls=false playsinline autoplay muted loop preload="metadata" )
+              source(src="../video/ios-china-app.mp4" type="video/mp4")
+            img.phone-preview__frame(srcset="../images/iphone-frame.png 2x")
+        .content-wrap
+          .content-block
+            h1.title Farfetch <br/> China app
+            p.accent-text As a principal designer, I led our Shanghai-based design team to create and launch a localised version of the Farfetch app in 2018.
+      
+      .width-wrapper_gray
+        .bps
+          .content-block.desk-margin-top-l
+            h1.title Accessible prototyping kit
+            p.bps__paragraph.accent-text I defined design standards for the native app and developed toolkits to help designers ensure that Farfetch interfaces are always AA accessible.
+          video.bps__video_desktop(controls=false playsinline autoplay muted loop preload="metadata")
+            source(src="../video/dynamictype-desktop.mp4" type="video/mp4")
+          video.bps__video_mobile(controls=false playsinline autoplay muted loop preload="metadata")
+            source(src="../video/dynamictype-mobile.mp4" type="video/mp4")
+      
+      .width-wrapper_black
+        .bps.bps_black
+          .content-block
+            h1.title Native UI <br/>framework
+            p.bps__paragraph.accent-text I teamed up with principal engineer Fabio Almeida to create a framework for designing and building production level interfaces faster than ever before.
+          video.bps__video_desktop(controls=false playsinline autoplay muted loop preload="metadata")
+            source(src="../video/ui-framework.mp4" type="video/mp4")
+          video.bps__video_mobile(controls=false playsinline autoplay muted loop preload="metadata")
+            source(src="../video/ui-framework-mobile.mp4" type="video/mp4")
+      
+      .sps
+        a.go-to-top.accent-text(href="#") Back to top ↑
+        .content-block
+          p.sps__text.accent-text Music keeps me productive and focused. Here are some of my favourite tracks:
+        iframe.sps__player(src="https://open.spotify.com/embed/playlist/4pADXdyYWW29iNZi4XpmEt" frameborder="0" allowtransparency="true" allow="encrypted-media")
+
+  script(async="" src="./js/main.js")
